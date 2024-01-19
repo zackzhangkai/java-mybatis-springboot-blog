@@ -10,18 +10,21 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.List;
+
 @Controller
 public class UserController {
     @Autowired
     private UserService userService;
 
-    @GetMapping("/")
-    public String index(){
-        return "index";
-    }
-//    public String index(Model model, UserQuery userQuery){
-//        PageInfo<User> userPageInfo = userService.listUserByName(userQuery);
-//        model.addAttribute("page",userPageInfo);
+//    @GetMapping("/")
+//    public String index(){
 //        return "index";
 //    }
+    @GetMapping("/")
+    public String index(Model model, UserQuery userQuery){
+        List<User> user = userService.listUser();
+//        model.addAttribute("page",userPageInfo);
+        return "index";
+    }
 }

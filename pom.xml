@@ -96,7 +96,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.example.demo.DemoApplication</mainClass>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
@@ -109,5 +109,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>

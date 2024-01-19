@@ -3,9 +3,9 @@ spring:
     name: "test"
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/mesh_service_test2?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&createDatabaseIfNotExist=true
-    username: xxxxx
-    password: xxxxx
+    url: jdbc:mysql://119.28.161.241:33060/demo?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&createDatabaseIfNotExist=true
+    username: root
+    password: my-secret-pw
 mybatis:
   type-aliases-package: com.example.demo.pojo
   mapper-locations: classpath:/mybatis/*.xml
