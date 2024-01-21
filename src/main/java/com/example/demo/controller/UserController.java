@@ -23,8 +23,9 @@ public class UserController {
 //    }
     @GetMapping("/")
     public String index(Model model, UserQuery userQuery){
-        List<User> user = userService.listUser();
-//        model.addAttribute("page",userPageInfo);
+//        List<User> user = userService.listUser();
+        PageInfo<User>  userPageInfo = userService.listUserByName(userQuery);
+        model.addAttribute("page",userPageInfo);
         return "index";
     }
 }
